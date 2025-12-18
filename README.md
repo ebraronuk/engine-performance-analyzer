@@ -1,14 +1,28 @@
-Motor performance analyzer scaffold initialized.
-Python klasörü modeller, health, faults ve utils alt modülleriyle birlikte 
-analiz tarafında kullanılacak temel yapıyı sağlar.
+# Engine Performance Analyzer
 
-Matlab klasöründe egt_model.m ve n1_n2_map.m fonksiyonları 
-simülasyon ve performans haritaları için başlangıç yer tutucuları olarak hazırlandı.
+Bu proje, uçak motorlarına ait temel performans ve sağlık parametrelerini
+analiz etmek amacıyla geliştirilen bir mühendislik analiz altyapısıdır.
 
-Bu sürüm yalnızca proje iskeletini ve ana modül yapı taşlarını içerir.
-İlerleyen versiyonlarda motor parametre modelleri, trend analizi ve 
-fault tespit mekanizmaları kademeli olarak eklenecektir.
+Amaç; sensör verilerinden (ör. EGT, N1/N2, yakıt akışı) türetilen basit
+hesaplamalar ile motor davranışını izlemek, trendleri analiz etmek ve
+olası performans bozulmalarına erken aşamada işaret edebilmektir.
 
-Kisa notlar: python/tests altindaki pytest dosyalari temel kontrol saglar.
-Matlab scriptlerini calistirirken motor parametrelerini baslangicta guncelleyebilirsiniz.
-Yeni motor senaryolari icin python/src/models altinda genislettiginiz fonksiyonlari testlerle destekleyin.
+## Proje Kapsamı
+
+- Motor performansına yönelik basit matematiksel modeller
+- EGT margin, trend ve türev tabanlı sağlık göstergeleri
+- Kural tabanlı ön arıza (fault) tespit mekanizmaları
+- Python tabanlı analiz altyapısı
+- MATLAB üzerinde destekleyici model ve görselleştirme fonksiyonları
+
+## Proje Yapısı
+
+- `python/`  
+  Performans hesaplamaları, sağlık analizleri ve fault tespit mantıkları
+
+- `matlab/`  
+  Motor modelleri ve temel performans haritaları için yardımcı fonksiyonlar
+
+Bu depo, projenin erken geliştirme aşamasını temsil etmektedir.
+İlerleyen sürümlerde modellerin detaylandırılması, trend analizlerinin
+genişletilmesi ve raporlama kabiliyetlerinin eklenmesi planlanmaktadır.
